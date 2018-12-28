@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: order
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@11.101.50.124:1521:orcl
+    username: scott
+    password: tiger
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:8761/eureka/,http://eureka2:8762/eureka/
+  instance:
+    prefer-ip-address: true
