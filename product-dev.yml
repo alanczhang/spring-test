@@ -1,6 +1,6 @@
 spring:
   application:
-    name: itcast-microservice-order #指定服务名
+    name: product #指定服务名
   datasource:
     driver-class-name: oracle.jdbc.driver.OracleDriver
     url: jdbc:oracle:thin:@11.101.50.124:1521:orcl
