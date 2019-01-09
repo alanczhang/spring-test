@@ -13,4 +13,4 @@ spring:
     url: jdbc:oracle:thin:@11.101.50.124:1521:orcl
     username: scott
 env:
-  test2
+  test
