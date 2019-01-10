@@ -6,6 +6,11 @@ spring:
     url: jdbc:oracle:thin:@11.101.50.124:1521:orcl
     username: scott
     password: tiger
+  rabbitmq:
+    host: localhost
+    port: 5762
+    username: guest
+    password: guest
 
 eureka:
   client:
