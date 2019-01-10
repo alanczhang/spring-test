@@ -12,6 +12,11 @@ spring:
     password: tiger
     url: jdbc:oracle:thin:@11.101.50.124:1521:orcl
     username: scott
+  rabbitmq:
+    host: localhost
+    port: 5762
+    username: guest
+    password: guest
 env:
   test
 girl:
