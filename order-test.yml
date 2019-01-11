@@ -14,7 +14,7 @@ spring:
     username: scott
   rabbitmq:
     host: localhost
-    port: 5762
+    port: 5672
     username: guest
     password: guest
 env:
