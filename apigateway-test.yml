@@ -1,10 +1,51 @@
-spring:
-  application:
-    name: apigateway
-    
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
   instance:
     prefer-ip-address: true
+
+logging:
+  level:
+    org.springframework.cloud.openfeign: debug
+    org.springframework.cloud.bus: debug
+
+#自定义路由
+zuul:
+  #全部服务忽略敏感头，全部服务都可专题cookie
+  sensitive-headers:
+  #/myproduct/product/list  -->/product/product/list
+  routes:
+    myproduct:
+      path: /myproduct/**
+      serviceId: product
+      sensitive-headers:
+      #简洁写法
+#    product： /myproduct/**
+  #排除某些路由
+  ignored-patterns:
+    - /**/product/listForOrder
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 60000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+#management:
+#  security:
+#    enabled:
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+
