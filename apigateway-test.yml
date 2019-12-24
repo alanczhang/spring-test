@@ -34,9 +34,10 @@ management:
     web:
       exposure:
         include: "*"
-#management:
-#  security:
-#    enabled:
+#http://localhost:6060/application/routes
+management:
+  security:
+    enabled:
 hystrix:
   command:
     default:
