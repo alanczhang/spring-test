@@ -30,14 +30,14 @@ zuul:
     socket-timeout-millis: 60000
 
 #显示路由zuul的端口配置，不配置无法访问 /routes
-management:                       
+management:
   endpoints:
     web:
       exposure:
         include: "*"
   endpoint:
-      health:
-        show-details: ALWAYS
+    health:
+      show-details: ALWAYS
 #查看路由规则  需要设置权限为  http://localhost:6060/application/routes
 management:
   security:
