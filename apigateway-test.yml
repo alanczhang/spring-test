@@ -30,16 +30,15 @@ zuul:
     socket-timeout-millis: 60000
 
 #显示路由zuul的端口配置，不配置无法访问 /routes
+#查看路由规则  需要设置权限为  http://localhost:6060/application/routes
 management:
   endpoints:
     web:
       exposure:
         include: "*"
-
-#查看路由规则  需要设置权限为  http://localhost:6060/application/routes
-management:
-  security:
-    enabled: false
+  endpoint:
+    health:
+      show-details: always
 hystrix:
   command:
     default:
