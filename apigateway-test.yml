@@ -34,10 +34,10 @@ management:
     web:
       exposure:
         include: "*"
-#http://localhost:6060/application/routes
+#查看路由规则  需要设置权限为  http://localhost:6060/application/routes
 management:
   security:
-    enabled:
+    enabled: false
 hystrix:
   command:
     default:
