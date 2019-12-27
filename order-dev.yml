@@ -20,6 +20,21 @@ spring:
     port: 5672
     username: guest
     password: guest
-
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1500
+#    getProductInfoList:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 60000
+#
+# /application/hystrix.stream   不写/application
+managemnet:
+  context-path:  /
 env:
   dev
