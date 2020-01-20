@@ -20,6 +20,8 @@ eureka:
     fetchRegistry:  true  #是否从Eureka中获取注册信息，默认为true
     serviceUrl: #Eureka客户端与Eureka服务端进行交互的地址
       defaultZone: http://eureka1:8761/eureka/,http://eureka2:8762/eureka/
+  instance:
+    prefer-ip-address: true   #docker 显示IP，而不是用的 053839b3d8ad:config:6001
       
 env:
   dev
