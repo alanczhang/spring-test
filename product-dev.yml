@@ -22,6 +22,18 @@ eureka:
       defaultZone: http://eureka1:8761/eureka/,http://eureka2:8762/eureka/
   instance:
     prefer-ip-address: true   #docker 显示IP，而不是用的 053839b3d8ad:config:6001
-      
+
+logging:
+  level:
+    org.springframework.cloud.netflix.feign: debug
+
+  ########### 服务跟踪   URL   发送端    抽样比100%
+  zipkin:
+    base-url: http://10.211.55.2:9411/
+    sender:
+      type: web
+  sleuth:
+    sampler:
+      probability: 1      
 env:
   dev
